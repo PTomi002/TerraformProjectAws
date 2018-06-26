@@ -1,0 +1,8 @@
+#!/bin/bash
+# Cloud init starts this script after image boot...
+sudo yum update -y
+sudo yum install -y httpd24
+sudo service httpd start
+sudo chkconfig httpd on
+sudo touch /var/www/html/index.html
+sudo yum install mysql -y
